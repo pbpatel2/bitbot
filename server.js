@@ -39,7 +39,7 @@ const parseCommits = (commits) => {
     let formattedMsg = "";
     commits.forEach((c) => { messages.push(c.message); });
     messages.forEach((m) => {
-        formattedMsg += "```" + m + "```";
+        formattedMsg = "```" + m + "```" + formattedMsg;
     });
     return formattedMsg;
 };
